@@ -3,7 +3,6 @@ Spectrogram functions.
 """
 import numpy as np
 import matplotlib.pyplot as plt
-from lspopt import spectrogram_lspopt
 from matplotlib.colors import Normalize
 from dreem_master_bin.utils import datetime_to_nightsec
 
@@ -25,6 +24,7 @@ def compute_spectrogram(eeg_data, fs, win_sec=30, fmin=0.5, fmax=18):
     """
     Compute spectrogram from EEG 1D-array
     """
+    from lspopt import spectrogram_lspopt
     # Calculate multi-taper spectrogram
     nperseg = int(win_sec * fs)
     assert eeg_data.size > 2 * nperseg, 'Data length must be at least 2 * win_sec.'
