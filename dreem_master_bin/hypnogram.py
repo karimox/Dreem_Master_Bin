@@ -10,6 +10,8 @@ intersect_periods
 import numpy as np
 from dreem_master_bin.utils import datetime_to_nightsec
 
+stage_colors = [(0.5, 0.2, 0.1), (0.5, 0.3, 1), (1, 0.5, 1), (0.8, 0, 0.7), (0.1, 0.7, 0)]
+
 
 def plot_hypnogram(
         hypnogram_i,
@@ -19,7 +21,6 @@ def plot_hypnogram(
         start_time=0,
         title='Hypnogram',
 ):
-    colorstage = [(0.5, 0.2, 0.1), (0.5, 0.3, 1), (1, 0.5, 1), (0.8, 0, 0.7), (0.1, 0.7, 0)]
     ytick_substage = [4, 2, 1.5, 1, 3, 4.7]
     ylabel_substage = ['N3', 'N2', 'N1', 'REM', 'WAKE', '']
 
@@ -46,7 +47,7 @@ def plot_hypnogram(
     for stage in range(5):
         xs = x_hypno[hypnogram == stage]
         ys = graph_hypno[hypnogram == stage]
-        ax.scatter(xs, ys, s=5, c=np.array([colorstage[stage]]), marker='s', linewidths=0.0)
+        ax.scatter(xs, ys, s=5, c=np.array([stage_colors[stage]]), marker='s', linewidths=0.0)
 
     tmp = range(-8, 24, 2)
     ax.set_xticks(tmp)

@@ -4,6 +4,7 @@
 # encoding: utf-8
 import numpy as np
 
+
 def datetime_to_nightsec(d_time):
     try:
         new_time = d_time.hour * 3600 + d_time.minute * 60 + d_time.second
