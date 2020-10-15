@@ -21,7 +21,7 @@ def plot_hypnogram(
 ):
     colorstage = [(0.5, 0.2, 0.1), (0.5, 0.3, 1), (1, 0.5, 1), (0.8, 0, 0.7), (0.1, 0.7, 0)]
     ytick_substage = [4, 2, 1.5, 1, 3, 4.7]
-    ylabel_substage = ['N3', 'N2', 'N1', 'REM', 'WAKE', 'Noise']
+    ylabel_substage = ['N3', 'N2', 'N1', 'REM', 'WAKE', '']
 
     # data
     hypnogram = np.array(hypnogram_i)
