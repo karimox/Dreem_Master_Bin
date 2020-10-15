@@ -30,5 +30,4 @@ def get_one_record(record):
     with h5py.File(filename, "r") as fi:
         for key, field in fields.items():
             results[key] = fi[field][()]
-        results['start_time'] = fi.attrs['start_time']
     return results
