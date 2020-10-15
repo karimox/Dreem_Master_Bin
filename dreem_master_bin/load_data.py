@@ -3,9 +3,8 @@
 """
 import os
 import h5py
-import numpy as np
 
-from td_dreem_bin import path_repo
+from dreem_master_bin import path_repo
 
 path_records = os.path.join(path_repo, "data", "Records/")
 
