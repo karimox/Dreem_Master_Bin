@@ -16,13 +16,14 @@ def get_one_record(record):
     """ load one Dreem record"""
     filename = path_records + str(record) + '.h5'
     fields = {
-        'eeg_1': 'channel1/visualization',
-        'eeg_2': 'channel2/visualization',
-        'hypnogram': 'algo/dreemnogram',
-        'accelerometer': 'accelerometer/norm',
-        'x_acc': 'accelerometer/x',
-        'y_acc': 'accelerometer/y',
-        'z_acc': 'accelerometer/z'
+        'eeg': 'eeg',
+        'hypnogram': 'hypnogram',
+        'accelerometer': 'accelerometer',
+        'spectrogram': 'spectrogram/spectrogram',
+        't': 'spectrogram/t',
+        'freq': 'spectrogram/freq',
+        'fs': 'sampling_frequency',
+        'start_time': 'start_time'
     }
 
     results = {}
