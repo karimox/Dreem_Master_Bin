@@ -8,7 +8,7 @@ from dreem_master_bin import path_repo
 
 path_records = os.path.join(path_repo, "data", "Records/")
 
-list_record = [1934791, 1980547, 1989860, 1994755, 2020368]
+list_record = [1934791, 1980547, 1989860, 1994755]
 
 
 def get_one_record(record):
