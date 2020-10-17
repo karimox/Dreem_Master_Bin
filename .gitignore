@@ -128,9 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# data folder
-data/
-
 # script
 tp_dreem_script.py
 
