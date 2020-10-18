@@ -46,6 +46,9 @@ def load_spectral_datasets():
     npzfile = np.load(load_path)
     x_test, y_test = npzfile['x_test'], npzfile['y_test']
 
+    # remove first column - record
+    x_train, x_test = x_train[:, 1:], x_test[:, 1:]
+
     return x_train, y_train, x_test, y_test
 
 
@@ -60,5 +63,8 @@ def load_feature_datasets():
     load_path = os.path.join(path_datasets, "record_datatest_features.npz")
     npzfile = np.load(load_path)
     x_test, y_test = npzfile['x_test'], npzfile['y_test']
+
+    # remove first column - record
+    x_train, x_test = x_train[:, 1:], x_test[:, 1:]
 
     return x_train, y_train, x_test, y_test

@@ -45,6 +45,7 @@ def plot_accelerometer(accelerometer_array,
                        rescale=3600.,
                        start_time=0,
                        color='k',
+                       y_label='accelero var',
                        title='movement'):
     """
     plot accelerometer norm
@@ -72,7 +73,7 @@ def plot_accelerometer(accelerometer_array,
     ax.set_xticks(tmp)
     ax.set_xticklabels([t % 24 for t in tmp])
     ax.set_xlim(t[0], t[-1])
-    ax.set_ylabel('accelero norm')
+    ax.set_ylabel(y_label)
     ax.set_title(title)
 
     return ax

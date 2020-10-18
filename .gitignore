@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 # script
-tp_dreem_script.py
+TD_SleepStaging_A.py
 
 # pycharm
 .idea/
